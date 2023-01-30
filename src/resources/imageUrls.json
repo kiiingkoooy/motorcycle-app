@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Africa Twin",
+    "url": "../Motmot_vids/Adventure/AfricaTwinPic.jpg"
+  },
+  {
+    "id": 2,
+    "name": "GS 1250",
+    "url": "../Motmot_vids/Adventure/Gs1250pic.jpg"
+  },
+  {
+    "id": 3,
+    "name": "R1",
+    "url": "../Motmot_vids/Supersport/r1pic.jpg"
+  },
+  {
+    "id": 4,
+    "name": "ZH2",
+    "url": "../Motmot_vids/Supersport/zh2pic.jpg"
+  },
+  {
+    "id": 5,
+    "name": "R3",
+    "url": "../Motmot_vids/Sports/r3pic.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Duke 390",
+    "url": "../Motmot_vids/Sports/duke390pic.jpg"
+  },
+  {
+    "id": 7,
+    "name": "250SR",
+    "url": "../Motmot_vids/Sports/250srpic.jpg"
+  }
+]
