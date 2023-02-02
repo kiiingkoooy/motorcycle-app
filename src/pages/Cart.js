@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from "react";
+import CardCart from "../components/CardCart";
+import { Context } from "../store/Store";
 
-export default function Cart() {
+export default function Cart({itemCart}) { 
+
   return (
-    <div>Cart</div>
-  )
+    <CardCart itemCart={itemCart}/>
+  );
 }

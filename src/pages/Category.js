@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
-import MotorPage from "./MotorPage";
+import { Link, useParams } from "react-router-dom";
 //import imgUrls from "../resources/imageUrls.json";
 import AfricaTwin from "../Motmot_vids/Adventure/AfricaTwinPic.jpg";
 import Gs1250 from "../Motmot_vids/Adventure/Gs1250pic.jpg";
@@ -22,6 +22,7 @@ export default function Category() {
   ];
   //const imgJson = imgUrls;
   const location = useLocation();
+  const params = useParams([]);
 
   const [motorType, setMotorType] = useState([]);
 
@@ -41,6 +42,7 @@ export default function Category() {
           category: responseData[key].Category,
           model: responseData[key].Model,
           imgName: responseData[key].imgName,
+          url: responseData[key].url,
         });
       }
       setMotorType(loadedMotor);
@@ -49,12 +51,6 @@ export default function Category() {
   }, [setMotorType]);
 
   //console.log(motorType);
-
-  let category = location.state.category;
-
-  let renderCategory = motorType
-    .filter((motor) => motor.category === category)
-    .map((motor) => motor);
 
   // let imgUrls = [];
   // for (let i = 0; i < renderCategory.length; i++) {
@@ -78,53 +74,83 @@ export default function Category() {
   //   console.log(imgJson[i].url)
   // }
 
+  let category = location.state.category;
+
+  let renderCategory = motorType
+    .filter((motor) => motor.category === category)
+    .map((motor) => motor);
+
+  //let urlIndex = 0;
   let imgUrl = renderCategory.map((model) => {
     for (let i = 0; i < imgs.length; i++) {
       if (model.imgName === imgs[i].name) {
         return imgs[i].url;
       }
     }
+    // for (let i = 0; i < imgs.length; i++) {
+    //   if (model.imgName === imgs[i].name) {
+    //     return urlIndex = [i];
+    //   }
+    // }
   });
-
-  //console.log(imgJson.name);
-
-  //console.log(imgUrl.length);
-
-  const clickHandler = (event) => {
-    
-  };
 
   return (
     <div className="mx-10 max-w-10xl">
-      <div className="flex justify-center mx-auto mt-[7%]">
-        <p className="font-bold text-blue-900 text-[50px] justify-center">
+      <div className="justify-center mx-auto mt-[7%]">
+        <p className="flex font-bold text-blue-900 text-[50px] justify-center">
           Choose your Ride
         </p>
+        <p className="flex font-bold text-gray-600 text-[100px] justify-center uppercase">
+          {params.categoryName}
+        </p>
       </div>
+      {/* {renderCategory.map((data) => {
+        return (
+          <div className="" key={data.id}>
+            <div className="">{data.id}</div>
+            <div className="">{data.category}</div>
+            <div className="">{data.model}</div>
+            <div className="">{data.imgName}</div>
+            <img src={imgUrl[urlIndex]} alt="" className="w-full" />
+          </div>
+        );
+      })} */}
       <div className="grid min-[1100px]:grid-cols-2 min-[900px]:grid-cols-1 gap-4 items-center justify-center mx-auto mt-[5%]">
         <div className="flex relative items-center hover:opacity-50">
           <img className="w-full" src={imgUrl[0]} alt="asd" />;
           <div className="absolute text-[1000%] text-white font-bold min-[1500px]:left-[40%] min-[1300px]:left-[35%] min-[900px]:left-[40%] min-[700px]:left-[37%] min-[550px]:left-[32%] left-[28%] opacity-0 hover:opacity-100 cursor-pointer ">
-            <p className="" onClick={clickHandler}>
+            <Link
+              to={`/products/${params.categoryName}/${renderCategory[0]?.imgName}`}
+              state={{ name: renderCategory[0]?.imgName, imgs: imgUrl[0] }}
+            >
               {renderCategory[0]?.model}
-            </p>
+            </Link>
+            {/* <p className="" onClick={clickHandler}>
+              {renderCategory[0]?.model}
+            </p> */}
           </div>
         </div>
         <div className="flex relative items-center hover:opacity-50">
           <img className="w-full" src={imgUrl[1]} alt="asd" />;
           <div className="absolute text-[1000%] text-white font-bold min-[1500px]:left-[34%] min-[1300px]:left-[25%] min-[900px]:left-[35%] min-[700px]:left-[32%] min-[550px]:left-[25%] left-[14%] opacity-0 hover:opacity-100 cursor-pointer ">
-            <p className="" onClick={clickHandler}>
+            <Link
+              to={`/products/${params.categoryName}/${renderCategory[1]?.imgName}`}
+              state={{ name: renderCategory[1]?.imgName, imgs: imgUrl[1] }}
+            >
               {renderCategory[1]?.model}
-            </p>
+            </Link>
           </div>
         </div>
         {imgUrl.length > 2 && (
           <div className="flex relative items-center hover:opacity-50">
             <img className="w-full" src={imgUrl[2]} alt="asd" />;
             <div className="absolute text-[1000%] text-white font-bold min-[1500px]:left-[34%] min-[1300px]:left-[25%] min-[900px]:left-[35%] min-[700px]:left-[32%] min-[550px]:left-[25%] left-[14%] opacity-0 hover:opacity-100 cursor-pointer">
-              <p className="" onClick={clickHandler}>
+              <Link
+                to={`/products/${params.categoryName}/${renderCategory[2]?.imgName}`}
+                state={{ name: renderCategory[2]?.imgName, imgs: imgUrl[2] }}
+              >
                 {renderCategory[2]?.model}
-              </p>
+              </Link>
             </div>
           </div>
         )}
