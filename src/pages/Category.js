@@ -9,8 +9,11 @@ import ZH2 from "../Motmot_vids/Supersport/zh2pic.jpg";
 import SR250 from "../Motmot_vids/Sports/250srpic.jpg";
 import Duke390 from "../Motmot_vids/Sports/duke390pic.jpg";
 import R3 from "../Motmot_vids/Sports/r3pic.jpg";
+import { useLoader } from "../store/Store";
+import Spinner from "../components/Spinner";
 
 export default function Category() {
+  const { loading, setLoading } = useLoader();
   const imgs = [
     { name: "AfricaTwin", url: AfricaTwin },
     { name: "Gs1250", url: Gs1250 },
@@ -49,6 +52,13 @@ export default function Category() {
     };
     fetchMotor();
   }, [setMotorType]);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   //console.log(motorType);
 
@@ -96,6 +106,7 @@ export default function Category() {
 
   return (
     <div className="mx-10 max-w-10xl">
+      {loading ? <Spinner /> : ""}
       <div className="justify-center mx-auto mt-[7%]">
         <p className="flex font-bold text-blue-900 text-[50px] justify-center">
           Choose your Ride

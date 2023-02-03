@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import CardCart from "../components/CardCart";
-import { Context } from "../store/Store";
+import { useCart } from "../store/Store";
 
-export default function Cart({itemCart}) { 
+export default function Cart() {
+  const { itemCart, setItemCart } = useCart();
 
-  return (
-    <CardCart itemCart={itemCart}/>
-  );
+  return <CardCart itemCart={itemCart} setItemCart={setItemCart} />;
 }

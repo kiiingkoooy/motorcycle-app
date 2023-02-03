@@ -1,6 +1,5 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -11,6 +10,33 @@ export default function Header() {
       return true;
     }
   };
+
+  const clickHandler = (event) => {
+    let category = event.target.textContent;
+
+    if (category === "Adventure") {
+      navigate(`/products/adventure`, {
+        state: {
+          category: category,
+        },
+      });
+    }
+    if (category === "Supersport") {
+      navigate(`/products/supersport`, {
+        state: {
+          category: category,
+        },
+      });
+    }
+    if (category === "Sport") {
+      navigate(`/products/sport`, {
+        state: {
+          category: category,
+        },
+      });
+    }
+  };
+
   const liStyle =
     "font-bold uppercase py-3 px-3 text-white text-[22px] cursor-pointer";
   const dropDownLiStyle =
@@ -37,9 +63,9 @@ export default function Header() {
             className="absolute align-left mt-[50px] left-[35.5%] sm:left-[40%] md:left-[42%] lg:left-[46%] hidden peer-hover:flex hover:flex
          w-[160px] flex-col bg-white drop-shadow-lg rounded-xl items-center "
           >
-            <Link to='/products/adventure' className={dropDownLiStyle}>Adventure</Link>
-            <Link to='/products/supersport' className={dropDownLiStyle}>Supersport</Link>
-            <Link to='/products/sport' className={`${dropDownLiStyle} px-20`}>Sport</Link>
+            <p onClick={clickHandler} className={dropDownLiStyle}>Adventure</p>
+            <p onClick={clickHandler} className={dropDownLiStyle}>Supersport</p>
+            <p onClick={clickHandler} className={`${dropDownLiStyle} px-20`}>Sport</p>
           </div>
           <li
             className={`${liStyle} ${
