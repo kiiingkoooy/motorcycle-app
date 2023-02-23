@@ -58,7 +58,7 @@ export default function Category() {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
-  }, []);
+  }, [params]);
 
   //console.log(motorType);
 
