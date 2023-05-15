@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/motorcycle-app/static/css/main.c7f98652.css",
+    "main.js": "/motorcycle-app/static/js/main.2d839ee4.js",
+    "static/js/787.2823f90d.chunk.js": "/motorcycle-app/static/js/787.2823f90d.chunk.js",
+    "static/media/AfricaTwin.mp4": "/motorcycle-app/static/media/AfricaTwin.d6be0d204bc0815c932a.mp4",
+    "static/media/R3.mp4": "/motorcycle-app/static/media/R3.41083b8b0f19b3cfbc86.mp4",
+    "static/media/ZH2.mp4": "/motorcycle-app/static/media/ZH2.57ac1426e2dc8b9692a8.mp4",
+    "static/media/Gs1250pic.jpg": "/motorcycle-app/static/media/Gs1250pic.5bf3505a80e025098a88.jpg",
+    "static/media/r3pic.jpg": "/motorcycle-app/static/media/r3pic.82914253e7b11ce9d9cd.jpg",
+    "static/media/zh2pic.jpg": "/motorcycle-app/static/media/zh2pic.e0ca4076f82144d0b2e0.jpg",
+    "static/media/r1pic.jpg": "/motorcycle-app/static/media/r1pic.2c3d5a665ff1752cc10b.jpg",
+    "static/media/AfricaTwinPic.jpg": "/motorcycle-app/static/media/AfricaTwinPic.1fb2f96d6cd8e4085681.jpg",
+    "static/media/duke390pic.jpg": "/motorcycle-app/static/media/duke390pic.574c6780df5227f81af7.jpg",
+    "static/media/250srpic.jpg": "/motorcycle-app/static/media/250srpic.b5906566df1448fa9ad0.jpg",
+    "static/media/spinner.svg": "/motorcycle-app/static/media/spinner.dc7e70f60d17681bbb9973226d5b2996.svg",
+    "index.html": "/motorcycle-app/index.html",
+    "main.c7f98652.css.map": "/motorcycle-app/static/css/main.c7f98652.css.map",
+    "main.2d839ee4.js.map": "/motorcycle-app/static/js/main.2d839ee4.js.map",
+    "787.2823f90d.chunk.js.map": "/motorcycle-app/static/js/787.2823f90d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c7f98652.css",
+    "static/js/main.2d839ee4.js"
+  ]
+}
