@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/motorcycle-app/static/css/main.c7f98652.css",
-    "main.js": "/motorcycle-app/static/js/main.2d839ee4.js",
+    "main.css": "/motorcycle-app/static/css/main.7b72cd01.css",
+    "main.js": "/motorcycle-app/static/js/main.f9a29220.js",
     "static/js/787.2823f90d.chunk.js": "/motorcycle-app/static/js/787.2823f90d.chunk.js",
     "static/media/AfricaTwin.mp4": "/motorcycle-app/static/media/AfricaTwin.d6be0d204bc0815c932a.mp4",
     "static/media/R3.mp4": "/motorcycle-app/static/media/R3.41083b8b0f19b3cfbc86.mp4",
@@ -15,12 +15,12 @@
     "static/media/250srpic.jpg": "/motorcycle-app/static/media/250srpic.b5906566df1448fa9ad0.jpg",
     "static/media/spinner.svg": "/motorcycle-app/static/media/spinner.dc7e70f60d17681bbb9973226d5b2996.svg",
     "index.html": "/motorcycle-app/index.html",
-    "main.c7f98652.css.map": "/motorcycle-app/static/css/main.c7f98652.css.map",
-    "main.2d839ee4.js.map": "/motorcycle-app/static/js/main.2d839ee4.js.map",
+    "main.7b72cd01.css.map": "/motorcycle-app/static/css/main.7b72cd01.css.map",
+    "main.f9a29220.js.map": "/motorcycle-app/static/js/main.f9a29220.js.map",
     "787.2823f90d.chunk.js.map": "/motorcycle-app/static/js/787.2823f90d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7f98652.css",
-    "static/js/main.2d839ee4.js"
+    "static/css/main.7b72cd01.css",
+    "static/js/main.f9a29220.js"
   ]
 }
