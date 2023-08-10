@@ -126,9 +126,9 @@ export default function Category() {
           </div>
         );
       })} */}
-      <div className="grid min-[1100px]:grid-cols-2 min-[900px]:grid-cols-1 gap-4 items-center justify-center mx-auto mt-[5%]">
+      <div className="grid min-[1100px]:grid-cols-2 min-[900px]:grid-cols-1 gap-4 items-center justify-center mx-auto mt-[5%] mb-[5%]">
         <div className="flex relative items-center hover:opacity-50">
-          <img className="w-full" src={imgUrl[0]} alt="asd" />;
+          <img className="w-full" src={imgUrl[0]} alt="asd" />
           <div className="absolute text-[1000%] text-white font-bold min-[1500px]:left-[40%] min-[1300px]:left-[35%] min-[900px]:left-[40%] min-[700px]:left-[37%] min-[550px]:left-[32%] left-[28%] opacity-0 hover:opacity-100 cursor-pointer ">
             <Link
               to={`/products/${params.categoryName}/${renderCategory[0]?.imgName}`}
@@ -142,7 +142,7 @@ export default function Category() {
           </div>
         </div>
         <div className="flex relative items-center hover:opacity-50">
-          <img className="w-full" src={imgUrl[1]} alt="asd" />;
+          <img className="w-full" src={imgUrl[1]} alt="asd" />
           <div className="absolute text-[1000%] text-white font-bold min-[1500px]:left-[34%] min-[1300px]:left-[25%] min-[900px]:left-[35%] min-[700px]:left-[32%] min-[550px]:left-[25%] left-[14%] opacity-0 hover:opacity-100 cursor-pointer ">
             <Link
               to={`/products/${params.categoryName}/${renderCategory[1]?.imgName}`}
@@ -154,7 +154,7 @@ export default function Category() {
         </div>
         {imgUrl.length > 2 && (
           <div className="flex relative items-center hover:opacity-50">
-            <img className="w-full" src={imgUrl[2]} alt="asd" />;
+            <img className="w-full" src={imgUrl[2]} alt="asd" />
             <div className="absolute text-[1000%] text-white font-bold min-[1500px]:left-[34%] min-[1300px]:left-[25%] min-[900px]:left-[35%] min-[700px]:left-[32%] min-[550px]:left-[25%] left-[14%] opacity-0 hover:opacity-100 cursor-pointer">
               <Link
                 to={`/products/${params.categoryName}/${renderCategory[2]?.imgName}`}
